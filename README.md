@@ -40,3 +40,4 @@ This endpoint finally returns a response which is of JSON array containing 25 re
 
 ## Hosted Publicly, you can access it on below provided address:
 website: https://bicky.pythonanywhere.com/
+
