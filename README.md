@@ -31,12 +31,12 @@ and based on this search beahavior, suggestions for searching words will show up
 This endpoint finally returns a response which is of JSON array containing 25 results, ranked by criteria (see below):
 1. Matches occurs anywhere in the string, not just at the beginning. For example, eryx matches archaeopteryx (among others).
 2. The ranking of results satisfies the following:
-  a. Matches at the start of a word ranks higher
+  1. Matches at the start of a word ranks higher
   For example, for the input pract, the result practical ranks higher than impractical.
-  b. Common words (those with a higher usage count) ranks higher than rare words.
-  c. Short words ranks higher than long words. For example, given the input environ, the result environment ranks
+  2. Common words (those with a higher usage count) ranks higher than rare words.
+  3. Short words ranks higher than long words. For example, given the input environ, the result environment ranks
   higher than environmentalism.
-  d. An exact match should always be ranked as the first result.
+  4. An exact match should always be ranked as the first result.
 
 ## Hosted Publicly, you can access it on below provided address:
 website: https://bicky.pythonanywhere.com/
