@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
 from .searchProgram import search, sort_results #relative import
 import json
@@ -22,10 +22,12 @@ def search_autocomplete(request):
 def getSearchResults(request):
     if request.method == 'GET':
         query = request.GET.get('term') # for example: query = 'hello'
-        searchResult = sort_results(search(query.lower()), query.lower())
-        if len(searchResult) == 0:
-            return JsonResponse({'Search_Result': "Word not found."})
+        if query:
+            searchResult = sort_results(search(query.lower()), query.lower())
+            if len(searchResult) == 0:
+                return JsonResponse({'Search_Result': "Word not found."})
+            else:
+                return JsonResponse({'Search_Result': searchResult})
         else:
-            return JsonResponse({'Search_Result': searchResult})
-
+            return redirect('/')
 
