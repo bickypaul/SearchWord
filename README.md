@@ -21,22 +21,22 @@ An simple jQuery based HTML template of Search Box with a Search button.
 This endpoint renders a search box in the browser.
 
 2. GET http://localhost:8000/search/?term=prac
+
 the service might receive this sequence of requests, like:
-  ### GET http://localhost:8000/search/?term=prac
-  ### GET http://localhost:8000/search/?term=pract
-  ### GET http://localhost:8000/search/?term=practi
+  1. GET http://localhost:8000/search/?term=prac
+  2. GET http://localhost:8000/search/?term=pract
+  3. GET http://localhost:8000/search/?term=practi
 and based on this search beahavior, suggestions for searching words will show up in the browser.
 
 3. GET http://localhost:800/searchResults/?term=prac
+
 This endpoint finally returns a response which is of JSON array containing 25 results, ranked by criteria (see below):
 1. Matches occurs anywhere in the string, not just at the beginning. For example, eryx matches archaeopteryx (among others).
-2. The ranking of results satisfies the following:
-  #### 1. Matches at the start of a word ranks higher, For example, for the input pract, the result practical ranks higher than
-  #### impractical.
-  #### 2. Common words (those with a higher usage count) ranks higher than rare words.
-  #### 3. Short words ranks higher than long words. For example, given the input environ, the result environment ranks
+2. Matches at the start of a word ranks higher, For example, for the input pract, the result practical ranks higher than impractical.
+3. Common words (those with a higher usage count) ranks higher than rare words.
+4. Short words ranks higher than long words. For example, given the input environ, the result environment ranks
   higher than environmentalism.
-  #### 4. An exact match should always be ranked as the first result.
+5. An exact match should always be ranked as the first result.
 
 ## Hosted Publicly, you can access it on below provided address:
 website: https://bicky.pythonanywhere.com/
