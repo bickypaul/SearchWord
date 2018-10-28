@@ -26,7 +26,7 @@ the service might receive this sequence of requests, like:
   1. GET http://localhost:8000/search/?term=prac
   2. GET http://localhost:8000/search/?term=pract
   3. GET http://localhost:8000/search/?term=practi
-and based on this search beahavior, suggestions for searching words will show up in the browser.
+and based on this search behavior, suggestions for searching words will show up in the browser.
 
 3. GET http://localhost:800/searchResults/?term=prac
 
