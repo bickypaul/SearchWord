@@ -14,7 +14,7 @@ This WebApp basically renders a search box on browser where the user can type in
 4. Goto http://localhost:8000
 
 ## Frontend.
-An simple jQuery based HTML template of Search Box with a Search button.
+A simple jQuery based HTML template of Search Box with a Search button.
 
 ## API Endpoints.
 1. GET http://localhost:8000
